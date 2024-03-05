@@ -20,6 +20,14 @@ public class CashCard {
         Amount = amount;
     }
 
+    @Override
+    public String toString() {
+        return "CashCard{" +
+                "Name='" + Name + '\'' +
+                ", Amount=" + Amount +
+                '}';
+    }
+
     public CashCard(String name, int amount) {
         Name = name;
         Amount = amount;
