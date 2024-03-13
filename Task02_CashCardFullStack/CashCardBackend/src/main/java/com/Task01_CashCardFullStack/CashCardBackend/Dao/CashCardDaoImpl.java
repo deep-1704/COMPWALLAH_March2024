@@ -39,9 +39,13 @@ public class CashCardDaoImpl implements CashCardDao{
     @Override
     @Transactional
     public void deleteCashCardDao(int id) {
-        TypedQuery<CashCard> query = entityManager.createQuery("DELETE FROM CashCard where id = :theId", CashCard.class);
-        query.setParameter("theId", id);
-        query.executeUpdate();
+//        TypedQuery<CashCard> query = entityManager.createQuery("DELETE FROM CashCard where id = :theId", CashCard.class);
+//        query.setParameter("theId", id);
+//        query.executeUpdate();
+        CashCard cashCard = entityManager.find(CashCard.class, id);
+        if(cashCard != null){
+            entityManager.remove(cashCard);
+        }
     }
 
     @Override

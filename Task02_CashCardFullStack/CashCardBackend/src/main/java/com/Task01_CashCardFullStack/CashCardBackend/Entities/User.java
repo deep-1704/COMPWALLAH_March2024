@@ -16,6 +16,7 @@ public class User {
     private String password;
     @Column(name = "enabled")
     private final int enabled = 1;
+    public User(){super();}
     public User(String username, String password) {
         this.username = username;
         this.password = password;
@@ -35,5 +36,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", enabled=" + enabled +
+                '}';
     }
 }

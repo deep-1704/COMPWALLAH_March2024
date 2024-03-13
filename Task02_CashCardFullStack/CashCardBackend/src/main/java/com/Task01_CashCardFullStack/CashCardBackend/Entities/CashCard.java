@@ -16,6 +16,7 @@ public class CashCard {
     @Column(name = "amount")
     private int amount;
 
+    public CashCard(){super();};
     public CashCard(String owner, String name, int amount) {
         this.owner = owner;
         this.name = name;
@@ -52,5 +53,15 @@ public class CashCard {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "CashCard{" +
+                "id=" + id +
+                ", owner='" + owner + '\'' +
+                ", name='" + name + '\'' +
+                ", amount=" + amount +
+                '}';
     }
 }

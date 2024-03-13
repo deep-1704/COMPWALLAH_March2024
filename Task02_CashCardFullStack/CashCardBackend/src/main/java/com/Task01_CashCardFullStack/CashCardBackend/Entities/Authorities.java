@@ -14,6 +14,7 @@ public class Authorities {
     @Id
     @Column(name = "authority")
     private final String authority = "ROLE_owner";
+    public Authorities(){super();}
 
     public Authorities(String username) {
         this.username = username;
@@ -25,5 +26,13 @@ public class Authorities {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    @Override
+    public String toString() {
+        return "Authorities{" +
+                "username='" + username + '\'' +
+                ", authority='" + authority + '\'' +
+                '}';
     }
 }
