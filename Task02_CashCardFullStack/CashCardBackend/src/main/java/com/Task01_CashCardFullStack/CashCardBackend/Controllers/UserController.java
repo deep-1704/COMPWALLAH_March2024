@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
     private final CashCardService cashCardService;
     private final UserService userService;
@@ -49,7 +50,7 @@ public class UserController {
     @DeleteMapping("/cashCards/{id}")
     public ResponseEntity<Void> deleteCashCard(@PathVariable int id){
         cashCardService.deleteCashCard(id);
-        return null;
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/users/login")

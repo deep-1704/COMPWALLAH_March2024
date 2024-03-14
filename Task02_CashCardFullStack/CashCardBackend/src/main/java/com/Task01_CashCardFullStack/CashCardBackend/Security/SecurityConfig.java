@@ -21,16 +21,7 @@ public class SecurityConfig{
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
-//        httpSecurity.authorizeHttpRequests(configurer ->
-//                configurer
-//                        .requestMatchers(HttpMethod.GET, "/api/**").hasRole("owner"));
-//
-//        httpSecurity.httpBasic(Customizer.withDefaults());
-//
-////        Disable Cross Site Request Forgery
-//        httpSecurity.csrf(AbstractHttpConfigurer::disable);
-//
-//        return httpSecurity.build();
+
 
         httpSecurity.authorizeHttpRequests(request -> request
                 .requestMatchers("/api/**")
