@@ -42,3 +42,7 @@ Every endpoint except `/api/users/register` requires Basic auth header
 
 * Body: User object representing new user
 * Creates a new user account
+
+## Video demonstration
+
+* YouTube link: [https://youtu.be/sw-yk5C6WmM](https://youtu.be/sw-yk5C6WmM)
